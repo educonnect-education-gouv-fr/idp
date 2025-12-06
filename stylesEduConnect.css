@@ -1,0 +1,90 @@
+/* display */
+.hidden-item {
+    display: none;
+}
+
+.bouton-france-connect a {
+    display: inline-block;
+    box-shadow: none;
+}
+
+.bouton-france-connect a img {
+    border: none;
+    width: 209px;
+    height: 56px;
+}
+
+.bouton-france-connect {
+    margin-bottom: 12px !important;
+}
+
+input::-moz-placeholder {
+    font-style: normal !important;
+}
+
+input:-ms-input-placeholder {
+    font-style: normal !important;
+}
+
+input::placeholder {
+    font-style: normal !important;
+}
+
+.fr-fi-information-fill.fr-callout.bandeau {
+    padding: 1.25rem 1.5rem 1.5rem 3.125rem !important;
+}
+
+.btn-modal {
+    min-width: 45%;
+    width: auto;
+}
+
+.date {
+    margin-bottom: 8px;
+}
+
+@media (min-width: 48em) {
+    #sidebar_maintenance {
+        display: block !important;
+    }
+}
+
+.baseline {
+    align-items: start;
+}
+
+@media (max-width: 47.99em) {
+    .img-france-relance {
+        width: 75%;
+        max-width: 75%;
+    }
+}
+
+.scroll .js-header .fr-header__service-title {
+    font-size: 1.125rem;
+}
+
+.etoile {
+    color: red;
+    font-weight: bold;
+}
+
+.label_champ_obligatoire {
+    display: inline;
+    gap: 5px;
+}
+
+.fr-error-text {
+    font-size: 1rem;
+}
+
+.btn-fc {
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: 0;
+}
+
+#label_captcha_2.fr-label {
+    color: black;
+}
