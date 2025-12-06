@@ -10,7 +10,7 @@
     <link rel="icon" href="idp-static/favicons/favicon.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="idp-static/favicons/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="idp-static/favicons/manifest.webmanifest" crossorigin="use-credentials">
-    <title>Connexion élève - ÉduConnect</title>
+    <title>Sélection du profil - ÉduConnect</title>
   <script src="idp-static/js/jquery.min.js"></script><script src="idp-static/js/cookie.js"></script><style>/* stylelint-disable */
 /* stylelint-enable */
 /** Buttons
@@ -20910,22 +20910,30 @@ input::placeholder { font-style: normal !important; }
 </style></head>
   
   
-  <body class="scrolled scroll fr-header-padding-top--minimized" id="body" style="">
-    <div class="fr-skiplinks">
-      <nav class="fr-container" role="navigation" aria-label="Accès rapide">
-        <ul class="fr-skiplinks__list">
-          <li>
-            <a class="fr-link" href="#contenu">Contenu</a>
-          </li>
-          <li>
-            <a class="fr-link" href="#footer">Pied de page</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+  <body class="scrolled fr-header-padding-top" id="body" style="">
+    <header role="banner" class="fr-header js-header fixed no-shadow" id="header_profil">
+      <div class="fr-header__body">
+        <div class="fr-container">
+          <div class="fr-header__body-row">
+            <div class="fr-header__brand fr-enlarge-link">
+              <div class="fr-header__brand-top">
+                <div class="fr-header__logo d-flex-column align-left">
+                  <img id="logo-marianne" src="https://educonnect.education.gouv.fr/idp-static/img/logo.png" alt="" class="logo-marianne logo-hidden" aria-hidden="true">
+                  <img id="logo-ministere-top" src="https://educonnect.education.gouv.fr/idp-static/img/logo-ministere.png" alt="" class="fr-logo logo-ministere-small">
+                </div>
+              </div>
+              <div class="fr-header__service">
+                <p id="titreEduConnect" class="fr-header__service-title">ÉduConnect</p>
+                <p class="fr-header__service-tagline">Un compte unique pour les services numériques des écoles et des établissements</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
 	<!-- header de la page de sélection de profil -->
-    <header role="banner" class="fr-header js-header fixed no-shadow hidden-item" id="header_profil">
+    <header role="banner" class="fr-header js-header fixed no-shadow" id="header_profil">
       <div class="fr-header__body">
         <div class="fr-container">
           <div class="fr-header__body-row">
@@ -20947,7 +20955,7 @@ input::placeholder { font-style: normal !important; }
     </header>
 
 	<!-- header de la page de sélection de connexion -->
-	<header role="banner" class="fr-header js-header fixed no-shadow minify" id="header_connexion">
+	<header role="banner" class="fr-header js-header fixed no-shadow minify hidden-item" id="header_connexion">
       <div class="fr-header__body">
         <div class="fr-container">
           <div class="fr-header__body-row">
@@ -20976,7 +20984,7 @@ input::placeholder { font-style: normal !important; }
           </div>
         </div>
       </div>
-      <div class="fr-header__menu fr-modal" id="modal-822" style="display: none !important;">
+      <div class="fr-header__menu fr-modal" id="modal-822" style="">
         <div class="fr-container">
           <button class="fr-link--close fr-link" aria-controls="modal-822" aria-label="Fermer le menu">Fermer le menu</button>
           <div class="fr-header__menu-links"><ul class="fr-links-group">
@@ -21015,14 +21023,14 @@ input::placeholder { font-style: normal !important; }
     <div class="fr-grid-row fr-grid-row--gutters flex-row-reverse flex-row-sm">
     <div class="fr-col-md-4 fr-col-12 flex-column-md hidden-lg sidebar-container">
         <div class="sidebar">
-        <div class="fr-pb-3w d-flex-column notification" id="sidebar_eleve_small">
+        <div class="fr-pb-3w d-flex-column notification hidden-item" id="sidebar_eleve_small">
             <p class="title-fs-18 fr-mb-1v">Le compte ÉduConnect peut donner accès&nbsp;:</p>
             <ul>
             <li>à l’espace numérique de travail (ENT)&nbsp;;</li>
             <li>au livret scolaire.</li>
             </ul>
         </div>
-        <div class="fr-pb-3w d-flex-column notification hidden-item" id="sidebar_responsable_small">
+        <div class="fr-pb-3w d-flex-column notification" id="sidebar_responsable_small">
             <p class="title-fs-18 fr-mb-1v">Le compte ÉduConnect peut donner accès&nbsp;:</p>
             <ul>
             <li>aux démarches en ligne, comme la fiche de renseignements, la demande de bourse, etc&nbsp;;</li>
@@ -21035,7 +21043,7 @@ input::placeholder { font-style: normal !important; }
 
     <div class="fr-col-md-8 fr-col-12">
         <!-- affichage de la sélection de profil -->
-        <div class="choixProfil hidden-item" id="div_profil">
+        <div class="choixProfil" id="div_profil">
         <h1 class="fs-20 fr-mb-3w">Je sélectionne mon profil</h1>
         <div class="choixProfil__row">
             <div class="choixProfil__btn">
@@ -21055,14 +21063,14 @@ input::placeholder { font-style: normal !important; }
         <!-- fin affichage de la sélection de profil -->
 
         <!-- affichage du formulaire de connexion -->
-        <div class="profil fr-pt-0 fr-pb-2w" id="div_connexion">
+        <div class="profil fr-pt-0 fr-pb-2w hidden-item" id="div_connexion">
         <div class="titreCompte fr-mb-2w hidden-item" id="titre_responsable">
             <div class="titreCompte__icone titreCompte__icone--rp">
             <img src="idp-static/img/icone-rp.svg" alt="" aria-hidden="true">
             </div>
             Responsable d'élève
         </div>
-        <div class="titreCompte fr-mb-2w" id="titre_eleve">
+        <div class="titreCompte fr-mb-2w hidden-item" id="titre_eleve">
             <div class="titreCompte__icone titreCompte__icone--eleve">
             <img src="idp-static/img/icone-eleve.svg" alt="" aria-hidden="true">
             </div>
@@ -21090,7 +21098,7 @@ input::placeholder { font-style: normal !important; }
                     <a class="fr-link small left-auto fr-fi-arrow-right-line fr-link--icon-right fr-pr-0 hidden-item" href="https://educonnect.education.gouv.fr/idp/profile/SAML2/Redirect/SSO?execution=e1s2#" hrefcible="https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliLogin/recupererLoginResponsable" id="identifiant_perdu_responsable" titremodale="Identifiant oublié indisponible" corpsmodale="&lt;b&gt; Avertissement : &lt;/b&gt;&nbsp;Cette fonctionnalité est temporairement indisponible. Veuillez attendre la fin de la maintenance d'ÉduConnect." onclick="location.href='https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliLogin/recupererLoginResponsable'">
                             Identifiant oublié ?
                         </a>
-                        <a class="fr-link small left-auto fr-fi-arrow-right-line fr-link--icon-right fr-pr-0" href="https://educonnect.education.gouv.fr/idp/profile/SAML2/Redirect/SSO?execution=e1s2#" hrefcible="https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliLogin/recupererLoginEleve" id="identifiant_perdu_eleve" titremodale="Identifiant oublié indisponible" corpsmodale="&lt;b&gt; Avertissement : &lt;/b&gt;&nbsp;Cette fonctionnalité est temporairement indisponible. Veuillez attendre la fin de la maintenance d'ÉduConnect." onclick="location.href='https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliLogin/recupererLoginEleve'">
+                        <a class="fr-link small left-auto fr-fi-arrow-right-line fr-link--icon-right fr-pr-0 hidden-item" href="https://educonnect.education.gouv.fr/idp/profile/SAML2/Redirect/SSO?execution=e1s2#" hrefcible="https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliLogin/recupererLoginEleve" id="identifiant_perdu_eleve" titremodale="Identifiant oublié indisponible" corpsmodale="&lt;b&gt; Avertissement : &lt;/b&gt;&nbsp;Cette fonctionnalité est temporairement indisponible. Veuillez attendre la fin de la maintenance d'ÉduConnect." onclick="location.href='https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliLogin/recupererLoginEleve'">
                             Identifiant oublié ?
                         </a>
                     </div>
@@ -21107,7 +21115,7 @@ input::placeholder { font-style: normal !important; }
                         <a class="fr-link small left-auto fr-fi-arrow-right-line fr-link--icon-right fr-pr-0 hidden-item" href="https://educonnect.education.gouv.fr/idp/profile/SAML2/Redirect/SSO?execution=e1s2#" hrefcible="https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliMdp/recupererMotDePasseResponsable" id="password_perdu_responsable" titremodale="Mot de passe oublié indisponible" corpsmodale="&lt;b&gt; Avertissement : &lt;/b&gt;&nbsp;Cette fonctionnalité est temporairement indisponible. Veuillez attendre la fin de la maintenance d'ÉduConnect." onclick="location.href='https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliMdp/recupererMotDePasseResponsable'">
                             Mot de passe oublié ?
                         </a>
-                        <a class="fr-link small left-auto fr-fi-arrow-right-line fr-link--icon-right fr-pr-0" href="https://educonnect.education.gouv.fr/idp/profile/SAML2/Redirect/SSO?execution=e1s2#" hrefcible="https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliMdp/recupererMotDePasseEleve" id="password_perdu_eleve" titremodale="Mot de passe oublié indisponible" corpsmodale="&lt;b&gt; Avertissement : &lt;/b&gt;&nbsp;Cette fonctionnalité est temporairement indisponible. Veuillez attendre la fin de la maintenance d'ÉduConnect." onclick="location.href='https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliMdp/recupererMotDePasseEleve">
+                        <a class="fr-link small left-auto fr-fi-arrow-right-line fr-link--icon-right fr-pr-0 hidden-item" href="https://educonnect.education.gouv.fr/idp/profile/SAML2/Redirect/SSO?execution=e1s2#" hrefcible="https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliMdp/recupererMotDePasseEleve" id="password_perdu_eleve" titremodale="Mot de passe oublié indisponible" corpsmodale="&lt;b&gt; Avertissement : &lt;/b&gt;&nbsp;Cette fonctionnalité est temporairement indisponible. Veuillez attendre la fin de la maintenance d'ÉduConnect." onclick="location.href='https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliMdp/recupererMotDePasseEleve">
                             Mot de passe oublié ?
                         </a>
                     </div>
@@ -21170,14 +21178,14 @@ input::placeholder { font-style: normal !important; }
     <div id="sidebar_maintenance" class="fr-col-md-4 fr-col-12 flex-column-md">
         <div class="sidebar" id="sidebar_parent">
         <div class="fr-pb-3w fr-displayed-md notification">
-            <div id="sidebar_eleve" class="">
+            <div id="sidebar_eleve" class="hidden-item">
             <p class="title-fs-18 fr-mb-1v">Le compte ÉduConnect peut donner accès&nbsp;:</p>
             <ul>
                 <li>à l’espace numérique de travail (ENT)&nbsp;;</li>
                 <li>au livret scolaire.</li>
             </ul>
             </div>
-            <div id="sidebar_responsable" class="hidden-item">
+            <div id="sidebar_responsable" class="">
             <p class="title-fs-18 fr-mb-1v">Le compte ÉduConnect peut donner accès&nbsp;:</p>
             <ul>
                 <li>aux démarches en ligne, comme la fiche de renseignements, la demande de bourse, etc&nbsp;;</li>
@@ -21411,4 +21419,5 @@ if (window.innerWidth >= 992) {
 
 
 
-<div data-mote-read-aloud-ignore="" id="mote-floating-sidebar-root"></div><div data-mote-read-aloud-ignore="" id="mote-read-aloud-floating-player-root"></div><div id="EdpuzzleScreenRecorderForegroundApp"><style>@import url('chrome-extension://oligonmocnihangdjlloenpndnniikol/screen_recorder/styles/font_faces.css');</style><div></div></div></body></html>
+<div data-mote-read-aloud-ignore="" id="mote-floating-sidebar-root"></div><div data-mote-read-aloud-ignore="" id="mote-read-aloud-floating-player-root"></div><div id="EdpuzzleScreenRecorderForegroundApp"><style>@import url('chrome-extension://oligonmocnihangdjlloenpndnniikol/screen_recorder/styles/font_faces.css');</style><div></div></div>
+</body></html>
