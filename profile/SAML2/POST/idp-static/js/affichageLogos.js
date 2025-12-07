@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch("/idp-static/logos.json")
+    fetch("idp-static/logos.json")
         .then((response) => response.json())
         .then((logos) => {
             let copyright = document.getElementById("copyright");
