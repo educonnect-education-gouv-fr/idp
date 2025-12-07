@@ -2,7 +2,7 @@ let flag_clic = 0;
 
 function checkModeLecture(form) {
     if (flag_clic === 0) {
-        fetch("/api/LECTURE")
+        fetch("api/LECTURE")
             .then((response) => response.json())
             .then((feature) => {
                 if (feature.enabled) {
@@ -23,7 +23,7 @@ let elements = document.querySelectorAll("a[hrefcible]");
 
 elements.forEach((element) => {
     element.onclick = function () {
-        fetch("/api/LECTURE")
+        fetch("api/LECTURE")
             .then((response) => response.json())
             .then((feature) => {
                 if (feature.enabled) {
